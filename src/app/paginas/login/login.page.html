@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Sentimos sua falta!</ion-title>
+    <p class="subTitle">entre para desfrutar do app</p>
+  </div>
+
+  <form action="">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input placeholder="Email" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input class="input" placeholder="Senha"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="senha-perdida">
+        <a [routerLink]="['/reset']" style="color:#820086">Esqueceu sua senha?</a>
+      </div>
+      <div class="user-novo">
+        <p>Novo por aqui? <a [routerLink]="['/cadastro']" style="color:#820086">Cadastre-se</a></p>
+      </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 45px;">
+      <ion-fab-button [routerLink]="['/home']"> 
+        <ion-icon name="chevron-forward">
+        </ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+
+
+</ion-content>
