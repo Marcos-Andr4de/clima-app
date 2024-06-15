@@ -7,11 +7,11 @@
   </div>
   <div>
     <ion-item>
-        <ion-input placeholder="Email" class="input"></ion-input>
+        <ion-input [(ngModel)]="email" placeholder="Email" class="input"></ion-input>
         <ion-icon name="person-outline"></ion-icon>
       </ion-item>
       <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 45px;">
-        <ion-fab-button [routerLink]="['/home']"> 
+        <ion-fab-button (click)="resetPassword()" > 
           <ion-icon name="chevron-forward">
           </ion-icon>
         </ion-fab-button>

@@ -1,6 +1,8 @@
 import { environment } from './../../environments/environment';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 const API_URL = environment.API_URL;
 const API_KEY = environment.API_KEY;
@@ -18,9 +20,18 @@ export class HomePage {
   weatherDetails:any
   name=""
   loading = true
+  user:any
 
-  constructor(public httpClient:HttpClient) {
-    //this.loadData()
+  constructor(public httpClient:HttpClient, public authService:AuthenticationService, public route:Router) {
+    this.user = authService.getProfile()
+  }
+
+  async logout(){
+    this.authService.singOut().then(()=>{
+      this.route.navigate(['/landing'])
+    }).catch((error)=>{
+      console.log(error);
+    })
   }
 
   loadData(){

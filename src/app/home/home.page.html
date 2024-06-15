@@ -4,8 +4,10 @@
 <ion-content class="bacc" [fullscreen]="true">
 
   <div style="text-align: center;margin: 15px">
-    <ion-label style="font-weight: 400; font-size: 2em;"> Aplicativo de Clima </ion-label>
+    <!--<ion-title>{{user}}</ion-title>-->
+    <ion-button (click)="logout()">Sair</ion-button>
   </div>
+
   <ion-searchbar [(ngModel)]="cityName" (ngModelChange)="loadData()" placeholder="Pesquise a cidade" class="searchBar" animated></ion-searchbar>
 
   <div *ngIf="!loading">
