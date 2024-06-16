@@ -43,6 +43,7 @@ ion-item{
 
 .senha-perdida{
     margin-left: 10px;
+    margin-top: 10px;
     justify-content: flex-end;
     a{
         font-weight: 390;
@@ -50,4 +51,24 @@ ion-item{
         text-decoration: none;
 
     }
+}
+ion-content {
+    --background: #ffff00 url('/assets/fundo-de-luzes-gradientes.jpg') no-repeat center center / cover !important;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.subTitle{
+    text-align: center;
+    font-size: 28px;
+    font-style:italic;
+    font-weight: 800;
+}
+
+.exigencia{
+    color: red;
 }

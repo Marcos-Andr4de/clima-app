@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <div class="header">
     <ion-title class="title">Sentimos sua falta!</ion-title>
-    <p class="subTitle">entre para desfrutar do app</p>
+    <p class="subTitle">Entre para desfrutar do app</p>
   </div>
 
   <form [formGroup]="loginForm">
@@ -11,10 +11,10 @@
         <ion-icon name="person-outline"></ion-icon>
       </ion-item>
       <div *ngIf="this.loginForm.controls?.['email'].touched && this.loginForm.controls?.['email'].invalid">
-        <ion-text *ngIf="errorControl.email.errors?.required">
+        <ion-text class="exigencia" *ngIf="errorControl.email.errors?.required">
           O email é obrigatório!
         </ion-text>
-        <ion-text *ngIf="errorControl.email.errors?.pattern">
+        <ion-text class="exigencia" *ngIf="errorControl.email.errors?.pattern">
           Insira um email válido!
         </ion-text>
       </div>
@@ -24,10 +24,10 @@
         <ion-icon name="lock-closed-outline"></ion-icon>
       </ion-item>
       <div *ngIf="this.loginForm.controls?.['password'].touched && this.loginForm.controls?.['password'].invalid">
-        <ion-text *ngIf="errorControl.password.errors?.required">
+        <ion-text class="exigencia" *ngIf="errorControl.password.errors?.required">
           A senha é obrigatória!
         </ion-text>
-        <ion-text *ngIf="errorControl.password.errors?.pattern">
+        <ion-text class="exigencia" *ngIf="errorControl.password.errors?.pattern">
           * 1 Número
           * 1 letra maiúscula
           * 8 dígitos
@@ -36,7 +36,7 @@
 
 
       <div class="senha-perdida">
-        <a [routerLink]="['/reset']" style="color:#820086">Esqueceu sua senha?</a>
+        <a [routerLink]="['#']" style="color:#820086">Esqueceu sua senha?</a>
       </div>
 
       <div class="user-novo">

@@ -18,6 +18,7 @@ ion-item{
     }   
     title{
         font-size: 2rem;
+        
     }
 }
 
@@ -39,4 +40,24 @@ ion-item{
     a{
         text-decoration: none;
     }
+}
+ion-content {
+    --background: #ffff00 url('/assets/fundo-de-luzes-gradientes.jpg') no-repeat center center / cover !important;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.subTitle{
+    text-align: center;
+    font-size: 28px;
+    font-style:italic;
+    font-weight: 800;
+}
+
+.exigencia{
+    color: red;
 }

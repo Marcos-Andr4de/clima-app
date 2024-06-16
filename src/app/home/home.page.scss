@@ -31,13 +31,13 @@
 }
 
 .searchBar{
-  --ion-background-color: #8539b1;
+  --ion-background-color: #820086;
   color: white;
   border-radius: 70px;
 }
 .cardStyle{
   border-radius: 30px;
-  --ion-background-color: #8539b1;
+  --ion-background-color: #820086;
 
   span{
     color: white;
@@ -60,4 +60,44 @@
 .container{
   text-align: center;
   margin-top: 60%;
+}
+
+ion-content {
+  --background: #ffff00 url('/assets/fundo-de-luzes-gradientes.jpg') no-repeat center center / cover !important;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.subTitle{
+  text-align: center;
+  font-size: 28px;
+  font-style:italic;
+  font-weight: 800;
+}
+
+.erroImg{
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.spanErro{
+  color: rgb(180, 0, 0);
+  font-size: 17px;
+}
+
+.titleMenu{
+  margin-left: 66px;
+  font-weight: 600;
+}
+
+.authors{
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
 }

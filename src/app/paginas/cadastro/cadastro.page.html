@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <div class="header">
-    <ion-title class="title">Bem Vindo</ion-title>
+    <ion-title class="title">Seja bem vindo!</ion-title>
     <p class="subTitle">Cadastre-se para desfrutar do app</p>
   </div>
 
@@ -13,7 +13,7 @@
         <ion-icon name="person-outline"></ion-icon>
       </ion-item>
       <div *ngIf="this.regForm.controls?.['nome'].touched && this.regForm.controls?.['nome'].invalid">
-        <ion-text *ngIf="errorControl.nome.errors?.required">
+        <ion-text class="exigencia" *ngIf="errorControl.nome.errors?.required">
           O nome é obrigatório!
         </ion-text>
       </div>
@@ -23,10 +23,10 @@
         <ion-icon name="person-outline"></ion-icon>
       </ion-item>
       <div *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid">
-        <ion-text *ngIf="errorControl.email.errors?.required">
+        <ion-text class="exigencia" *ngIf="errorControl.email.errors?.required">
           O email é obrigatório!
         </ion-text>
-        <ion-text *ngIf="errorControl.email.errors?.pattern">
+        <ion-text class="exigencia" *ngIf="errorControl.email.errors?.pattern">
           Insira um email válido!
         </ion-text>
       </div>
@@ -36,18 +36,18 @@
         <ion-icon name="lock-closed-outline"></ion-icon>
       </ion-item>
       <div *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid">
-        <ion-text *ngIf="errorControl.password.errors?.required">
+        <ion-text class="exigencia" *ngIf="errorControl.password.errors?.required">
           A senha é obrigatória!
         </ion-text>
-        <ion-text *ngIf="errorControl.password.errors?.pattern">
+        <ion-text class="exigencia" *ngIf="errorControl.password.errors?.pattern">
           * 1 Número
           * 1 letra maiúscula
           * 8 dígitos
         </ion-text>
       </div>
 
-      <div>
-        <p class="user-novo">Já possui uma conta?<a [routerLink]="['/login']" style="color: #820086;">Entre aqui</a></p>
+      <div class="user-novo">
+        <p>Já possui uma conta?<a [routerLink]="['/login']" style="color: #820086;">Entre aqui</a></p>
       </div>
     </div>
 
